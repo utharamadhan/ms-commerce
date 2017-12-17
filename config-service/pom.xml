@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.rpramadhan.commerce.configservice</groupId>
+	<groupId>com.rpramadhan.commerce.config</groupId>
 	<artifactId>config-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -79,7 +79,7 @@
 					<target>${java.compiler.version}</target>
 					<archive>
 						<manifest>
-							<mainClass>com.rpramadhan.commerce.configservice.main.ConfigServiceMain</mainClass>
+							<mainClass>com.rpramadhan.commerce.config.main.ConfigServiceMain</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

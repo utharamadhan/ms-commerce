@@ -1,16 +1,18 @@
-package com.rpramadhan.commerce.inventoryservice.main;
+package com.rpramadhan.commerce.config.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * @author rpramadhan
  */
+@EnableConfigServer
 @SpringBootApplication
-public class InventoryServiceMain {
+public class ConfigServiceMain {
 	
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(InventoryServiceMain.class, args);
+		SpringApplication.run(ConfigServiceMain.class, args);
 	}
 
 }
