@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.rpramadhan.commerce.inventory</groupId>
-	<artifactId>inventory-service</artifactId>
+	<groupId>com.rpramadhan.commerce.order</groupId>
+	<artifactId>order-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>inventory-service</name>
+	<name>order-service</name>
 	<url>http://maven.apache.org</url>
 	
 	<parent>
@@ -43,16 +43,24 @@
 		</dependency>
 		<dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
+            <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+        <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -91,7 +99,7 @@
 					<target>${java.compiler.version}</target>
 					<archive>
 						<manifest>
-							<mainClass>com.rpramadhan.commerce.inventory.main.InventoryServiceMain</mainClass>
+							<mainClass>com.rpramadhan.commerce.order.main.OrderServiceMain</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

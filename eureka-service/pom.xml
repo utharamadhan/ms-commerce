@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.rpramadhan.commerce.inventory</groupId>
-	<artifactId>inventory-service</artifactId>
+	<groupId>com.rpramadhan.commerce.eureka</groupId>
+	<artifactId>eureka-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>inventory-service</name>
+	<name>eureka-service</name>
 	<url>http://maven.apache.org</url>
 	
 	<parent>
@@ -38,21 +38,13 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
-        <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -91,7 +83,7 @@
 					<target>${java.compiler.version}</target>
 					<archive>
 						<manifest>
-							<mainClass>com.rpramadhan.commerce.inventory.main.InventoryServiceMain</mainClass>
+							<mainClass>com.rpramadhan.commerce.eureka.main.EurekaServiceMain</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
